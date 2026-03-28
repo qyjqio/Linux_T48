@@ -1,6 +1,25 @@
 #!/bin/bash
-# 安装后刷新桌面数据库
+set -e
+
+# 检查 minipro 是否已安装
+if ! command -v minipro &>/dev/null; then
+    echo "[*] 未检测到 minipro，正在自动编译安装..."
+    apt-get install -y -qq build-essential pkg-config libusb-1.0-0-dev zlib1g-dev git 2>/dev/null || true
+    TMPDIR=$(mktemp -d)
+    git clone --depth=1 https://gitlab.com/DavidGriffith/minipro.git "$TMPDIR/minipro" 2>/dev/null
+    cd "$TMPDIR/minipro"
+    make -j$(nproc) 2>/dev/null
+    make install 2>/dev/null
+    make udev 2>/dev/null
+    udevadm control --reload-rules 2>/dev/null || true
+    udevadm trigger 2>/dev/null || true
+    rm -rf "$TMPDIR"
+    echo "[*] minipro 安装完成"
+fi
+
+# 刷新桌面数据库
 update-desktop-database /usr/share/applications/ 2>/dev/null || true
+
 echo ""
 echo "======================================"
 echo " Linux_T48编程器 安装完成！"

@@ -3,8 +3,8 @@ Version: 1.0.0
 Section: electronics
 Priority: optional
 Architecture: amd64
-Depends: python3 (>= 3.8), python3-tk, minipro
-Recommends: libusb-1.0-0
+Depends: python3 (>= 3.8), python3-tk
+Recommends: libusb-1.0-0, build-essential, pkg-config, libusb-1.0-0-dev
 Maintainer: 车机研究所_草软
 Description: Linux_T48编程器 - T48/TL866 万能编程器图形界面
  基于开源 minipro 驱动的 T48/TL866 系列编程器 GUI 工具。
