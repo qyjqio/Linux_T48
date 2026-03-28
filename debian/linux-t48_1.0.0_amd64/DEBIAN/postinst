@@ -23,6 +23,6 @@ update-desktop-database /usr/share/applications/ 2>/dev/null || true
 echo ""
 echo "======================================"
 echo " Linux_T48编程器 安装完成！"
-echo " 启动: minipro-gui"
+echo " 启动: linux-t48"
 echo " 菜单: 搜索 'Linux_T48编程器'"
 echo "======================================"

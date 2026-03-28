@@ -46,14 +46,14 @@ sudo bash dump-alg-minipro.bash "$SHARE_DIR" 2>/dev/null && echo "  -> 算法安
 echo "[4/6] 安装 Linux_T48编程器 GUI..."
 cd /tmp
 git clone --depth=1 https://github.com/qyjqio/Linux_T48.git >/dev/null 2>&1
-sudo cp Linux_T48/minipro-gui.py /usr/local/bin/minipro-gui
-sudo chmod +x /usr/local/bin/minipro-gui
+sudo cp Linux_T48/linux-t48.py /usr/local/bin/linux-t48
+sudo chmod +x /usr/local/bin/linux-t48
 echo "  -> GUI 安装完成"
 
 # 创建桌面快捷方式
 echo "[5/6] 创建桌面快捷方式..."
 mkdir -p ~/.local/share/applications
-cp Linux_T48/minipro-gui.desktop ~/.local/share/applications/
+cp Linux_T48/linux-t48.desktop ~/.local/share/applications/
 update-desktop-database ~/.local/share/applications/ 2>/dev/null
 echo "  -> 快捷方式创建完成"
 
@@ -66,7 +66,7 @@ echo ""
 echo "======================================"
 echo " 安装完成！"
 echo " 启动方式："
-echo "   命令行: minipro-gui"
+echo "   命令行: linux-t48"
 echo "   菜单: 搜索 'Linux_T48编程器'"
 echo "======================================"
 echo ""

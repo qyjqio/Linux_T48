@@ -12,9 +12,9 @@ cp debian/linux-t48_1.0.0_amd64/DEBIAN/control "debian/${PKG}/DEBIAN/"
 cp debian/linux-t48_1.0.0_amd64/DEBIAN/postinst "debian/${PKG}/DEBIAN/"
 chmod 755 "debian/${PKG}/DEBIAN/postinst"
 
-cp minipro-gui.py "debian/${PKG}/usr/local/bin/minipro-gui"
-chmod 755 "debian/${PKG}/usr/local/bin/minipro-gui"
-cp minipro-gui.desktop "debian/${PKG}/usr/share/applications/"
+cp linux-t48.py "debian/${PKG}/usr/local/bin/linux-t48"
+chmod 755 "debian/${PKG}/usr/local/bin/linux-t48"
+cp linux-t48.desktop "debian/${PKG}/usr/share/applications/"
 
 dpkg-deb --build "debian/${PKG}" "${PKG}.deb"
 echo "构建完成: ${PKG}.deb"

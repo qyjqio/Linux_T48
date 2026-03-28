@@ -58,18 +58,18 @@ cd minipro && make -j$(nproc) && sudo make install && sudo make udev
 
 # 2. 安装 GUI
 git clone https://github.com/qyjqio/Linux_T48.git
-sudo cp Linux_T48/minipro-gui.py /usr/local/bin/minipro-gui
-sudo chmod +x /usr/local/bin/minipro-gui
+sudo cp Linux_T48/linux-t48.py /usr/local/bin/linux-t48
+sudo chmod +x /usr/local/bin/linux-t48
 
 # 3. 创建桌面快捷方式
-cp Linux_T48/minipro-gui.desktop ~/.local/share/applications/
+cp Linux_T48/linux-t48.desktop ~/.local/share/applications/
 ```
 
 ## 使用方法
 
 ```bash
 # 命令行启动
-minipro-gui
+linux-t48
 
 # 或在应用菜单搜索 "Linux_T48编程器"
 ```

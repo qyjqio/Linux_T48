@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=Linux_T48编程器
 Comment=Linux_T48编程器 by：车机研究所_草软
-Exec=python3 /usr/local/bin/minipro-gui
+Exec=python3 /usr/local/bin/linux-t48
 Icon=utilities-system-monitor
 Terminal=false
 Type=Application
